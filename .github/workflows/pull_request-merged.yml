@@ -1,0 +1,11 @@
+name: Pull Request Milestone
+on:
+  pull_request:
+    types: [closed]
+jobs:
+  milestone:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions-book/github-action-pull-request-milestone-bash@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
