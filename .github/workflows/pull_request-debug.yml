@@ -6,6 +6,8 @@ jobs:
   output-debug:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions-book/github-action-explore-debug@master
+      - uses: ./
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           jq_selector: ".pull_request"
