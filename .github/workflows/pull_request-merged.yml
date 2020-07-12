@@ -6,7 +6,7 @@ jobs:
   milestone:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions-book/github-action-pull-request-milestone-bash@master
+      - uses: actions-book/github-action-pull-request-milestone-toolkit@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
